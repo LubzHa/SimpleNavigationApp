@@ -1,11 +1,9 @@
 package com.example.navigationapp.data.remote
 
-import com.example.navigationapp.R
 import com.example.navigationapp.data.remote.responses.AddressCoordinates
 import com.example.navigationapp.data.remote.responses.AddressSearchSuggestions
 import com.example.navigationapp.data.remote.responses.Directions
 import com.example.navigationapp.util.Constants.MAPBOX_PUBLIC_TOKEN
-import com.mapbox.geojson.Point
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

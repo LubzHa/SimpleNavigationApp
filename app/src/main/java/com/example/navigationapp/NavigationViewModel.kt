@@ -1,14 +1,9 @@
 package com.example.navigationapp
 
-import android.widget.Toast
-import androidx.compose.animation.core.updateTransition
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.toMutableStateList
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,14 +11,9 @@ import com.example.navigationapp.data.models.AddressSuggestionEntry
 import com.example.navigationapp.data.repository.DirectionsRepository
 import com.example.navigationapp.util.Event
 import com.example.navigationapp.util.Resource
-import com.mapbox.geojson.BoundingBox
-import com.mapbox.geojson.Geometry
-import com.mapbox.geojson.LineString
-import com.mapbox.geojson.MultiLineString
 import com.mapbox.geojson.Point
 import com.mapbox.maps.CameraOptions
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
-import com.mapbox.maps.extension.style.expressions.dsl.generated.switchCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -153,7 +143,6 @@ class NavigationViewModel @Inject constructor(
 
     private fun updateMapViewPort(center: Point) {
         // TODO: Calculate the zoom level that fits both points
-
         viewPortState.flyTo(
             CameraOptions.Builder()
                 .center(center)

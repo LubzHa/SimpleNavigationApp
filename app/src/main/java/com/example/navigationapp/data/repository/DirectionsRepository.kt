@@ -3,8 +3,6 @@ package com.example.navigationapp.data.repository
 import com.example.navigationapp.data.models.AddressSuggestionEntry
 import com.example.navigationapp.data.remote.DirectionsAPI
 import com.example.navigationapp.data.remote.responses.AddressCoordinates
-import com.example.navigationapp.data.remote.responses.AddressSearchSuggestions
-import com.example.navigationapp.data.remote.responses.Directions
 import com.example.navigationapp.util.Resource
 import com.mapbox.geojson.Point
 import dagger.hilt.android.scopes.ActivityScoped
